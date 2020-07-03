@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wooder</title>
+    <link rel="stylesheet" href="scss_css/style.css">
+    <link rel="stylesheet" href="img/icon/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header__container">
+    <div class="menu__toggle">
+        <button class="menu__toggle-button">
+            <span class="nav-toggle__item"></span>
+        </button>
+        <span class="menu__toggle-text">menu</span>
+    </div>
+    <nav class="nav__menu">
+        <div class="header__logo">
+            <img src="img/logo__header.png" alt="">
+        </div>
+        <ul class="nav__menu__list">
+            <li class="nav__menu__list-item"><a href="#" class="nav__menu__list-link">home</a></li>
+            <li class="nav__menu__list-item"><a href="#" class="nav__menu__list-link">products</a></li>
+            <li class="nav__menu__list-item"><a href="#" class="nav__menu__list-link">about</a></li>
+        </ul>
+    </nav>
+    <div class="lang__switcher">en</div>
+</header>
+
+<!--MAIN-->
+<section class="main">
+    <div class="container">
+        <p class="main__side__text">furniture & decor</p>
+        <div class="main__title-wrapper">
+            <h1 class="main__title">wooder</h1>
+            <button class="main__button">learn more <span class="arrow main__button__arrow"></span></button>
+        </div>
+        <div class="scroll-wrapper">
+            <div class="icon-mouse-wrapper">
+                <span class="icon-mouse"></span>
+                <span class=" scroll__arrow"></span>
+                <p class="scroll__text">scroll</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--PRODUCTS-->
+<section class="products">
+    <div class="container">
+        <div class="product__element product__element-even">
+            <p class="product__number">01 <span class="product__number-dot">.</span></p>
+            <div class="product__element-description">
+                <div class="product__title-wrapper">
+                    <h2 class="product__title">furniture</h2>
+                </div>
+                <p class="product__text">Wooder utilizes materials otherwise left behind, rendered useless in their original intent. By creating new pieces made of reclaimed barnwood</p>
+                <button class="product__button">learn more <span class="arrow product__element-arrow"></span></button>
+            </div>
+            <div class="product__element__img-wrapper"><img src="img/furniture.png" alt="" class="product__element__img"></div>
+        </div>
+        <div class="product__element product__element-odd">
+            <div class="product__element__img-wrapper"><img src="img/decor.png" alt="" class="product__element__img"></div>
+            <div class="product__element-description">
+                <div class="product__title-wrapper">
+                    <h2 class="product__title">furniture</h2>
+                </div>
+                <p class="product__text">Wooder utilizes materials otherwise left behind, rendered useless in their original intent. By creating new pieces made of reclaimed barnwood</p>
+                <button class="product__button">learn more <span class="arrow product__element-arrow"></span></button>
+            </div>
+            <p class="product__number__od">01 <span class="product__number-dot">.</span></p>
+        </div>
+    </div>
+</section>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
