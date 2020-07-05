@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Montserrat;
 }
 
 ul{
@@ -31,7 +32,6 @@ li{
   z-index: 100;
   position: absolute;
   color: #868686;
-  font-family: Montserrat;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -185,13 +185,11 @@ li{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: Montserrat;
   position: relative;
 }
 
 .main__side__text{
   width: 160px;
-  font-family: Montserrat;
   font-weight: 700;
   font-size: 14px;
   color: #2d271e;
@@ -375,7 +373,6 @@ li{
   text-transform: uppercase;
   transform: rotate(90deg);
   color: #1f1e1e;
-  font-family: Montserrat;
   font-weight: 700;
   font-size: 14px;
 }
@@ -387,6 +384,10 @@ li{
   margin-top: 90px;
   justify-content: center;
   position: relative;
+
+  ////////////////////////////////////////////////
+  overflow: hidden;
+  ////////////////////////////////////////////////
 }
 
 .product__element-odd{
@@ -395,7 +396,6 @@ li{
 
 .title{
   text-transform: uppercase;
-  font-family: Montserrat;
   font-weight: 700;
   font-size: 48px;
 }
@@ -427,12 +427,11 @@ li{
   }
 }
 
-.product__text{
+.subtitle{
   width: 350px;
-  font-family: Montserrat;
   font-weight: 400;
   font-size: 15px;
-  margin-bottom: 35px;
+  margin: 30px 0 35px 0;
   position: relative;
   &::before{
     content: "";
@@ -442,7 +441,7 @@ li{
   }
 }
 
-.product__text-even{
+.product__subtitle-even{
   &::before{
     position: absolute;
     top: 8px;
@@ -450,7 +449,7 @@ li{
   }
 }
 
-.product__text-odd{
+.product__subtitle-odd{
   &::before{
     position: absolute;
     top: 8px;
@@ -466,7 +465,6 @@ li{
   cursor: pointer;
   margin-bottom: 40px;
   position: relative;
-  font-family: Montserrat;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
@@ -511,7 +509,6 @@ li{
 }
 
 .product__number{
-  font-family: Montserrat;
   font-weight: 700;
   font-size: 36px;
   //margin: 374px 100px 0 0;
@@ -521,7 +518,6 @@ li{
 }
 
 .product__number__od{
-  font-family: Montserrat;
   font-weight: 700;
   font-size: 36px;
   //margin: 374px 100px 0 0;
@@ -561,7 +557,6 @@ li{
 
 .quality__subtitle{
   text-align: center;
-  font-family: Montserrat;
   font-weight: 400;
   font-size: 15px;
   margin-top: 60px;
@@ -625,29 +620,183 @@ li{
 
 .video__title{
   margin-top: 30px;
-  font-family: Montserrat;
   font-weight: 400;
   font-size: 16px;
   text-align: center;
 }
 
+//SINGLE__VIDEO//
 
+.single__video{
+  background: url("../img/video_singl_bg.png") no-repeat;
+  background-size: cover;
+  height: 920px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 160px;
+  overflow: hidden;
+}
 
+.player{
+  max-width: 1560px;
+  max-height: 740px;
+  height: 740px;
+  border: 1px solid #bea67c;
+}
 
+.player__title-wrapper{
+  margin: 15% auto 0  18%;
+  width: 100%;
+  max-width: 540px;
+  position: relative;
+  &::before{
+    content: "";
+    border: 50px solid #fff;
+    border-radius: 50%;
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: -254px;
+    left: 463px;
+    transition: .2s;
+    opacity: .1;
+  }
+  &::after {
+    content: " ";
+    position: absolute;
+    left: 615px;
+    top: 4px;
+    transform: rotate(135deg) skew(15deg, 15deg);
+    border: 150px solid;
+    border-radius: 25px;
+    border-color: #fff transparent transparent #fff;
+    transition: .2s;
+    opacity: .1;
+  }
+}
 
+.player__title{
+  font-weight: 700;
+  font-size: 48px;
+  color: #bea67c;
+  text-transform: uppercase;
+  position: relative;
+  &::before{
+    content: "";
+    height: 1px;
+    width: 150px;
+    background-color: #fff;
+    position: absolute;
+    top: 25px;
+    left: -175px;
+  }
+}
 
+.player__subtitle{
+  font-weight: 300;
+  font-size: 15px;
+  color: #fff;
+  width: 400px;
+  margin-top: 60px;
+  position: relative;
+  &::before{
+    content: "";
+    height: 4px;
+    width: 45px;
+    background-color: #bea67c;
+    position: absolute;
+    top: 8px;
+    left: -70px;
+  }
+}
 
+.player__button{
+  border: 2px solid #fff;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 70px;
+  padding: 22px  75px  22px 105px;
+  position: relative;
+  transition: .2s;
+  &::before{
+    content: "";
+    border: 3px solid #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 18px;
+    left: 65px;
+    transition: .2s;
+  }
+  &::after {
+    content: " ";
+    position: absolute;
+    left: 70px;
+    top: 26px;
+    transform: rotate(135deg) skew(15deg, 15deg);
+    border: 5px solid;
+    border-radius: 5px;
+    border-color: #fff transparent transparent #fff;
+    transition: .2s;
+  }
+  &:hover{
+    text-shadow: #fff 0 0 20px;
+    box-shadow: #fff 0 0 10px;
+  }
+  &:hover::before{
+    box-shadow: #fff 0 0 10px;
+  }
+  &:hover::after{
+    box-shadow: #fff 0 0 10px;
+  }
+}
 
+//ABOUT//
+.about{
+  margin-top: 140px;
+}
 
+.about__container{
+  display: flex;
+}
 
+.about__title-wrapper{
+  margin: 100px 0 0 90px;
+  width: 100%;
+  max-width: 340px;
+}
 
+.about__title{
+  font-weight: 700;
+  font-size: 48px;
+  color: #000;
+  text-transform: uppercase;
+  position: relative;
+  &::before{
+    content: "";
+    height: 1px;
+    width: 150px;
+    background-color: #000000;
+  }
+}
 
+.about__subtitle{
+  font-weight: 400;
+  font-size: 15px;
+  color: #464646;
+}
 
-
-
-
-
-
+.about__img{
+  max-width: 600px;
+  width: 100%;
+}
 
 
 
