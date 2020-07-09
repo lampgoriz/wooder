@@ -17,6 +17,9 @@ li {
   padding: 0 15px;
   margin: 0 auto; }
 
+.header-fixed {
+  position: fixed; }
+
 .header__container {
   display: flex;
   justify-content: space-around;
@@ -25,7 +28,6 @@ li {
   max-width: 1860px;
   padding: 30px 30px 0 30px;
   z-index: 100;
-  position: absolute;
   color: #868686;
   font-weight: 700;
   text-transform: uppercase; }
@@ -54,7 +56,21 @@ li {
   border: 0;
   background: none;
   outline: none;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: .2s; }
+
+.menu__toggle-button-active .nav-toggle__item {
+  background: none;
+  transition: .2s; }
+  .menu__toggle-button-active .nav-toggle__item::before {
+    transform-origin: left bottom;
+    transform: rotate(45deg) translateX(3px);
+    top: -12px; }
+  .menu__toggle-button-active .nav-toggle__item::after {
+    transform-origin: top;
+    transform: rotate(135deg);
+    top: 2px;
+    left: -1px; }
 
 .nav-toggle__item {
   width: 100%;
@@ -95,10 +111,11 @@ li {
   margin-left: 30px; }
 
 .nav__menu {
-  height: 60px;
+  height: 35px;
   display: flex;
   justify-content: center;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 .header__logo-wrapper {
   cursor: pointer;
@@ -107,9 +124,21 @@ li {
 .header__logo {
   width: 100%; }
 
+.nav__menu__list-active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 35px;
+  left: -55px;
+  transition: .3s; }
+
 .nav__menu__list-item {
   margin-left: 50px;
   font-size: 15px; }
+
+.nav__menu__list-item-active {
+  padding: 5px;
+  margin: 10px 0; }
 
 .nav__menu__list-link {
   transition: .2s;
@@ -166,7 +195,7 @@ li {
     font-weight: 700;
     font-size: 350px;
     position: absolute;
-    top: 730px;
+    top: 930px;
     left: 10%;
     color: #bea67c;
     opacity: .1; }
@@ -434,6 +463,7 @@ li {
 
 .product__button {
   width: 135px;
+  height: 27px;
   border: 0;
   background: none;
   outline: none;
@@ -765,7 +795,11 @@ li {
     width: 0; } }
 @media (max-width: 1024px) {
   .nav__menu__list {
-    display: none; }
+    display: none;
+    transition: .3s; }
+
+  .nav__menu__list-active {
+    display: flex; }
 
   .menu__toggle {
     display: block; }
