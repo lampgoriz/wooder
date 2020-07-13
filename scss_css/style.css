@@ -124,6 +124,12 @@ li {
 .header__logo {
   width: 100%; }
 
+.nav__menu__list {
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+
 .nav__menu__list-active {
   display: flex;
   flex-direction: column;
@@ -678,6 +684,8 @@ li {
     left: -70px; }
 
 .player__button {
+  display: block;
+  max-width: 300px;
   border: 2px solid #fff;
   background: none;
   outline: none;
@@ -686,6 +694,7 @@ li {
   font-size: 14px;
   color: #fff;
   text-transform: uppercase;
+  text-decoration: none;
   margin-top: 70px;
   padding: 22px  75px  22px 105px;
   position: relative;
